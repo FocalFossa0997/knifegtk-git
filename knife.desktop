@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Knife
+Icon=/usr/share/icons/knifegtk/knifegtk.png
+Exec=/usr/bin/knifegtk.py
+Categories=Utility
