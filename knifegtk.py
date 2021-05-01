@@ -9,6 +9,8 @@ from gi.repository import Gtk
 class AboutWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="About Knife")
+        self.set_keep_above(True)
+        self.set_resizable(False)
 
         self.box = Gtk.Box(spacing=6)
         self.add(self.box)
@@ -16,7 +18,7 @@ class AboutWindow(Gtk.Window):
         self.mlabel = Gtk.Label(label="Knife is a tool created by Focal Fossa. This tool allows you to easily kill processes.")
         self.box.pack_start(self.mlabel, True, True, 0)
 
-        self.cbutton = Gtk.Button(label="Close...")
+        self.cbutton = Gtk.Button(label="Close")
         self.cbutton.connect("clicked", self.on_cbutton_pressed)
         self.box.pack_start(self.cbutton, True, True, 0)
 
@@ -27,6 +29,8 @@ class AboutWindow(Gtk.Window):
 class MyWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Knife")
+        self.set_keep_above(True)
+        self.set_resizable(False)
 
         self.box = Gtk.Box(spacing=6)
         self.add(self.box)
